@@ -33,11 +33,15 @@ function componentToHex(c) {
   
 generateMono();
 
-const mono = document.getElementById('mono').children;
-console.log(mono);
 
-for (let j = 0; j < mono.length; j++) {
-        let color = Math.floor(Math.random()*255);
-        
-        mono[j].style.backgroundColor = rgbToHex(color,color,color)
+
+document.getElementById('monobtn').addEventListener('click',generateMonoSquares)
+const mono = document.getElementById('mono').children;
+function generateMonoSquares() {
+    for (let j = 0; j < mono.length; j++) {
+        let color = Math.floor(Math.random()*255);        
+        mono[j].style.backgroundColor = rgbToHex(color,color,color);
+        mono[j].style.transitionDelay = (j+1)/10 + "s";
+        mono[j].style.content = "rgbToHex(color,color,color)";
+}
 }
