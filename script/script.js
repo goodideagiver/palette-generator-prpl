@@ -31,11 +31,11 @@ function componentToHex(c) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   }
   
-generateMono();
 
 
 
-document.getElementById('monobtn').addEventListener('click',generateMonoSquares)
+const monobtn = document.getElementById('monobtn');
+monobtn.addEventListener('click',generateMonoSquares)
 const mono = document.getElementById('mono').children;
 function generateMonoSquares() {
     for (let j = 0; j < mono.length; j++) {
@@ -43,7 +43,7 @@ function generateMonoSquares() {
         mono[j].style.opacity = 0;
         mono[j].style.transform = "translate(0,-20px)";
         mono[j].style.backgroundColor = rgbToHex(color,color,color);
-        mono[j].style.transition = (mono.length/10)/2 + "s";
+        mono[j].style.transition = (mono.length/10)/3 + "s";
         mono[j].style.transitionDelay = ((j+1)/10)/2 + "s";
         setTimeout(() => {
             mono[j].innerHTML = "<div>" + rgbToHex(color,color,color);
@@ -53,4 +53,25 @@ function generateMonoSquares() {
     }
 }
 
-generateMonoSquares();
+
+
+const monowrapper = document.getElementById('mono');
+const monorange1 = document.getElementById('monorange');
+monorange1.addEventListener("click",monoRange)
+
+function monoRange() {
+    for (let j = 0; j < mono.length; j++) {
+        mono[j].style.opacity = 0;        
+    }
+    setTimeout(() => {
+        let innerMono =[]
+    for (let i = 0; i < monorange1.valueAsNumber; i++) {
+       innerMono = innerMono + "<div class='pal-it'></div>";
+    }
+    monowrapper.innerHTML = innerMono;
+    generateMonoSquares();
+    }, ((mono.length/10))*1000);
+    
+}
+
+monoRange();
