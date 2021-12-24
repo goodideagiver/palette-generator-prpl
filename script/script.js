@@ -42,6 +42,6 @@ function generateMonoSquares() {
         let color = Math.floor(Math.random()*255);        
         mono[j].style.backgroundColor = rgbToHex(color,color,color);
         mono[j].style.transitionDelay = (j+1)/10 + "s";
-        mono[j].style.content = "rgbToHex(color,color,color)";
+        mono[j].innerHTML = "<div>" + rgbToHex(color,color,color);
 }
 }
