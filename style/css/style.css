@@ -23,8 +23,8 @@
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   aspect-ratio: 1/1;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   border-radius: 8px;
   display: -webkit-box;
   display: -ms-flexbox;

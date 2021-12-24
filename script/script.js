@@ -40,8 +40,17 @@ const mono = document.getElementById('mono').children;
 function generateMonoSquares() {
     for (let j = 0; j < mono.length; j++) {
         let color = Math.floor(Math.random()*255);        
+        mono[j].style.opacity = 0;
+        mono[j].style.transform = "translate(0,-20px)";
         mono[j].style.backgroundColor = rgbToHex(color,color,color);
-        mono[j].style.transitionDelay = (j+1)/10 + "s";
-        mono[j].innerHTML = "<div>" + rgbToHex(color,color,color);
+        mono[j].style.transition = (mono.length/10)/2 + "s";
+        mono[j].style.transitionDelay = ((j+1)/10)/2 + "s";
+        setTimeout(() => {
+            mono[j].innerHTML = "<div>" + rgbToHex(color,color,color);
+            mono[j].style.opacity = 1;
+            mono[j].style.transform = "translate(0)";
+        }, ((mono.length/10))*1000);
+    }
 }
-}
+
+generateMonoSquares();
