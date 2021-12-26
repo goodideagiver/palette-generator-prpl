@@ -57,7 +57,7 @@ function generateMonoSquares() {
 
 const monowrapper = document.getElementById('mono');
 const monorange1 = document.getElementById('monorange');
-monorange1.addEventListener("click",monoRange)
+monorange1.addEventListener("change",monoRange)
 
 function monoRange() {
     for (let j = 0; j < mono.length; j++) {
@@ -100,7 +100,7 @@ function generateColorSquares() {
 
 const colorsqwrapper = document.getElementById('color');
 const colorsqrange1 = document.getElementById('colorrange');
-colorsqrange1.addEventListener("click",colorRange)
+colorsqrange1.addEventListener("change",colorRange)
 
 function colorRange() {
     for (let j = 0; j < colorsq.length; j++) {
