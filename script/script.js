@@ -83,10 +83,12 @@ const colorbtn = document.getElementById('colorbtn');
 colorbtn.addEventListener('click',generateColorSquares)
 const colorsq = document.getElementById('color').children;
 function generateColorSquares() {
+    clrstring = "";
     for (let j = 0; j < colorsq.length; j++) {
         let color = Math.floor(Math.random()*255);  
         let color2 = Math.floor(Math.random()*255);
         let color3 = Math.floor(Math.random()*255);      
+        clrstring = clrstring + (" " + rgbToHex(color,color2,color3));
         colorsq[j].style.transition = (colorsq.length/10)/4 + "s";
         colorsq[j].style.opacity = 0;
         colorsq[j].style.transform = "translate(0,0px) rotateX(90deg)";
@@ -98,6 +100,7 @@ function generateColorSquares() {
             colorsq[j].style.transform = "translate(0)";
         }, ((colorsq.length/10))*1000);
     }
+    document.getElementById('colorsum').innerHTML = clrstring;
 }
 
 
@@ -126,15 +129,19 @@ document.getElementById('monosum').addEventListener('click',copyMono);
 
 function copyColors(text) {
     navigator.clipboard.writeText(text).then(function() {
-        console.log('Async: Copying to clipboard was successful!');
         alert('Skopiowano');
       }, function(err) {
-        console.error('Async: Could not copy text: ', err);
         alert('Nie skopiowano');
       });
 }
 
 function copyMono() {
-    monoColors = document.getElementById('monosum').innerText;
-    copyColors(monoColors);
+    Colors = document.getElementById('monosum').innerText;
+    copyColors(Colors);
+}
+
+document.getElementById('colorsum').addEventListener('click',copyColor);
+function copyColor() {
+    Colors = document.getElementById('colorsum').innerText;
+    copyColors(Colors);
 }

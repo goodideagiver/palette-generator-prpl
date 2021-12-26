@@ -71,7 +71,6 @@ h1 {
 
 .col-bt {
     cursor: pointer;
-    border: 2px transparent solid;
     background-color: lightgray;
     color: black;
     margin: auto;
@@ -82,6 +81,7 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     transition: 0.3s;
+    border: 2px transparent solid;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     &:hover {
         border: 2px rgb(170, 4, 170) solid;
@@ -202,6 +202,21 @@ h1 {
     font-weight: bold;
     border-radius: 8px;
     border: 1px gray solid;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px transparent solid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    &:hover {
+        border: 2px rgb(170, 4, 170) solid;
+        filter: brightness(1.1);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    &:active {
+        color: rgb(170, 4, 170);
+        transition: 0s;
+        transform: scale(0.95);
+        background-color: rgb(255, 255, 255);
+    }
   }
   
   @media (max-width:500px) {
