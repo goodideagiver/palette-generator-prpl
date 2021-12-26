@@ -5,9 +5,13 @@
           box-sizing: border-box;
 }
 
+body {
+  max-width: 1000px;
+  margin: auto;
+}
+
 .pal-wrapp {
   gap: 5px;
-  max-width: 1000px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,4 +84,40 @@
   transition: 0s;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.rangestyle {
+  margin: auto;
+  width: 100%;
+  display: block;
+}
+
+.rangestyle {
+  height: 25px;
+  -webkit-appearance: none;
+  background: #6b6b6b;
+  outline: none;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.rangestyle:hover {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.rangestyle::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00fd0a;
+  cursor: pointer;
+  border: 4px solid #333;
+  -webkit-box-shadow: -407px 0 0 400px #00fd0a;
+          box-shadow: -407px 0 0 400px #00fd0a;
 }
