@@ -27,6 +27,7 @@ h1 {
   background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
   /* Standard syntax (must be last) */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: bg-rain 15s infinite;
           animation: bg-rain 15s infinite;
@@ -75,6 +76,7 @@ h1 {
 }
 
 .pal-it {
+  max-height: 100px;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   -webkit-box-flex: 1;
@@ -245,4 +247,10 @@ input[type=range]:focus::-ms-fill-lower {
 
 input[type=range]:focus::-ms-fill-upper {
   background: #CCCCCC;
+}
+
+@media (max-width: 500px) {
+  .pal-it {
+    max-height: 10vh;
+  }
 }
