@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +12,53 @@ body {
   padding: 20px;
 }
 
+h1 {
+  font-family: 'Staatliches', cursive;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: red;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, left top, right top, from(orange), color-stop(yellow), color-stop(green), color-stop(cyan), color-stop(blue), to(violet));
+  background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+  /* Standard syntax (must be last) */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: bg-rain 15s infinite;
+          animation: bg-rain 15s infinite;
+  background-size: 1000%;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
+@-webkit-keyframes bg-rain {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes bg-rain {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
 .pal-wrapp {
   gap: 5px;
   display: -webkit-box;
@@ -18,7 +66,7 @@ body {
   display: flex;
   height: auto;
   margin: auto;
-  margin-top: 20vh;
+  margin-top: 5vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
@@ -27,13 +75,12 @@ body {
 }
 
 .pal-it {
-  max-width: 100px;
   max-height: 100px;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+      -ms-flex: 1 1 10%;
+          flex: 1 1 10%;
   aspect-ratio: 1/1;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -115,7 +162,6 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 11px;
   cursor: pointer;
-  animate: 0.2s;
   -webkit-box-shadow: 3px 3px 6px #C9C9C9;
           box-shadow: 3px 3px 6px #C9C9C9;
   background: #CCCCCC;
@@ -144,7 +190,6 @@ input[type=range]::-moz-range-track {
   width: 100%;
   height: 11px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 3px 3px 6px #C9C9C9;
   background: #CCCCCC;
   border-radius: 50px;
@@ -165,7 +210,6 @@ input[type=range]::-ms-track {
   width: 100%;
   height: 11px;
   cursor: pointer;
-  animate: 0.2s;
   background: transparent;
   border-color: transparent;
   color: transparent;

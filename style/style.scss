@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -10,21 +12,42 @@ body {
     padding: 20px;
 }
 
+h1 {
+    font-family: 'Staatliches', cursive;
+    margin: auto;
+    width: fit-content;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: bg-rain 15s infinite;
+    background-size: 1000%;
+    filter: brightness(0.7);
+}
+
+@keyframes bg-rain {
+    0% {background-position: left;}
+    50% {background-position: right;}
+    100% {background-position: left;}
+}
+
 .pal-wrapp {
     gap: 5px;
     display: flex;
     height: auto;
     margin: auto;
-    margin-top: 20vh;
+    margin-top: 5vh;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .pal-it {
-    max-width: 100px;
     max-height: 100px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    flex: 1 1 100%;
+    flex: 1 1 10%;
     aspect-ratio: 1/1;
     transition: 0.2s;
     border-radius: 8px;
@@ -87,7 +110,6 @@ body {
     width: 100%;
     height: 11px;
     cursor: pointer;
-    animate: 0.2s;
     box-shadow: 3px 3px 6px #C9C9C9;
     background: #CCCCCC;
     border-radius: 50px;
@@ -111,7 +133,6 @@ body {
     width: 100%;
     height: 11px;
     cursor: pointer;
-    animate: 0.2s;
     box-shadow: 3px 3px 6px #C9C9C9;
     background: #CCCCCC;
     border-radius: 50px;
@@ -130,7 +151,6 @@ body {
     width: 100%;
     height: 11px;
     cursor: pointer;
-    animate: 0.2s;
     background: transparent;
     border-color: transparent;
     color: transparent;
