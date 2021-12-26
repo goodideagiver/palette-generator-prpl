@@ -22,6 +22,7 @@ h1 {
     background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: bg-rain 15s infinite;
     background-size: 1000%;
@@ -45,7 +46,7 @@ h1 {
 }
 
 .pal-it {
-    max-height: 100px;
+    max-height: max(100px,5vh);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     flex: 1 1 5%;
     aspect-ratio: 1/1;
