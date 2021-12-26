@@ -44,14 +44,14 @@ h1 {
     margin: auto;
     margin-top: 5vh;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .pal-it {
     height: 100px;
     width: 100px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    flex: 1 1 5%;
+    flex: 1 0 0%;
     transition: 0.2s;
     border-radius: 8px;
     display: flex;
