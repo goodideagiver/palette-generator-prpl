@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -112,7 +113,7 @@ h1 {
 
 .col-bt {
   cursor: pointer;
-  border: none;
+  border: 2px transparent solid;
   background-color: lightgray;
   color: black;
   margin: auto;
@@ -121,7 +122,7 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   padding: 20px;
-  border-radius: 50px;
+  border-radius: 8px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -129,6 +130,7 @@ h1 {
 }
 
 .col-bt:hover {
+  border: 2px #aa04aa solid;
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -136,10 +138,12 @@ h1 {
 }
 
 .col-bt:active {
+  color: #aa04aa;
   -webkit-transition: 0s;
   transition: 0s;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+  background-color: white;
 }
 
 .rangestyle {
@@ -247,6 +251,26 @@ input[type=range]:focus::-ms-fill-lower {
 
 input[type=range]:focus::-ms-fill-upper {
   background: #CCCCCC;
+}
+
+.colsum {
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  margin: 20px 0;
+  background-color: rgba(250, 235, 215, 0.424);
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px gray solid;
 }
 
 @media (max-width: 500px) {

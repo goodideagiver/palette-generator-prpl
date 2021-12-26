@@ -37,6 +37,7 @@ function componentToHex(c) {
 const monobtn = document.getElementById('monobtn');
 monobtn.addEventListener('click',generateMonoSquares)
 function generateMonoSquares() {
+    let clrstring = "";
     const mono = document.getElementById('mono').children;
     for (let j = 0; j < mono.length; j++) {
         let color = Math.floor(Math.random()*255);        
@@ -44,6 +45,7 @@ function generateMonoSquares() {
         mono[j].style.opacity = 0;
         mono[j].style.transform = "translate(0,0px) rotateX(90deg)";
         mono[j].style.backgroundColor = rgbToHex(color,color,color);
+        clrstring = clrstring + (" " + rgbToHex(color,color,color));
         mono[j].style.transitionDelay = ((j+1)/10)/2 + "s";
         setTimeout(() => {
             mono[j].innerHTML = "<div>" + rgbToHex(color,color,color);
@@ -51,6 +53,7 @@ function generateMonoSquares() {
             mono[j].style.transform = "translate(0)";
         }, ((mono.length/10))*1000);
     }
+    document.getElementById('monosum').innerHTML = clrstring;
 }
 
 
@@ -117,3 +120,21 @@ function colorRange() {
 }
 
 colorRange();
+
+
+document.getElementById('monosum').addEventListener('click',copyMono);
+
+function copyColors(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        console.log('Async: Copying to clipboard was successful!');
+        alert('Skopiowano');
+      }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+        alert('Nie skopiowano');
+      });
+}
+
+function copyMono() {
+    monoColors = document.getElementById('monosum').innerText;
+    copyColors(monoColors);
+}

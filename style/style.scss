@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
 
 * {
     padding: 0;
@@ -70,7 +71,7 @@ h1 {
 
 .col-bt {
     cursor: pointer;
-    border: none;
+    border: 2px transparent solid;
     background-color: lightgray;
     color: black;
     margin: auto;
@@ -79,16 +80,19 @@ h1 {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 20px;
-    border-radius: 50px;
+    border-radius: 8px;
     transition: 0.3s;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     &:hover {
+        border: 2px rgb(170, 4, 170) solid;
         filter: brightness(1.1);
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
     &:active {
+        color: rgb(170, 4, 170);
         transition: 0s;
         transform: scale(0.95);
+        background-color: rgb(255, 255, 255);
     }
 }
 
@@ -183,6 +187,21 @@ h1 {
   }
   input[type=range]:focus::-ms-fill-upper {
     background: #CCCCCC;
+  }
+
+  .colsum {
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    margin: 20px 0;
+    background-color:rgba(250, 235, 215, 0.424);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px gray solid;
   }
   
   @media (max-width:500px) {
