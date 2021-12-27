@@ -85,8 +85,7 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     transition: 0.3s;
-    border: 2px transparent solid;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border: 2px rgba(255, 255, 255, 0.438) solid;
     &:hover {
         border: 2px rgb(170, 4, 170) solid;
         filter: brightness(1.1);
@@ -104,6 +103,9 @@ h1 {
     margin: auto;
     width: 100%;
     display: block;
+    --thumbcol: purple;
+    --thumbborder: black 0px solid;
+    --sliderborder: rgb(163, 163, 163) 1px solid;
 }
 
   input[type=range] {
@@ -119,18 +121,18 @@ h1 {
     width: 100%;
     height: 11px;
     cursor: pointer;
-    box-shadow: 3px 3px 6px #C9C9C9;
+    
     background: #CCCCCC;
     border-radius: 50px;
-    border: 0px solid #010101;
+    border: var(--sliderborder);
   }
   input[type=range]::-webkit-slider-thumb {
-    box-shadow: 1px 1px 3px #808080;
-    border: 0px solid #00001E;
+    
+    border: var(--thumbborder);
     height: 30px;
     width: 30px;
     border-radius: 50px;
-    background: #000000;
+    background: var(--thumbcol);
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -9.5px;
@@ -142,18 +144,18 @@ h1 {
     width: 100%;
     height: 11px;
     cursor: pointer;
-    box-shadow: 3px 3px 6px #C9C9C9;
+    
     background: #CCCCCC;
     border-radius: 50px;
-    border: 0px solid #010101;
+    border: var(--sliderborder);
   }
   input[type=range]::-moz-range-thumb {
-    box-shadow: 1px 1px 3px #808080;
-    border: 0px solid #00001E;
+    
+    border: var(--thumbborder);
     height: 30px;
     width: 30px;
     border-radius: 50px;
-    background: #000000;
+    background: var(--thumbcol);
     cursor: pointer;
   }
   input[type=range]::-ms-track {
@@ -166,28 +168,28 @@ h1 {
   }
   input[type=range]::-ms-fill-lower {
     background: #CCCCCC;
-    border: 0px solid #010101;
+    border: var(--sliderborder);
     border-radius: 100px;
-    box-shadow: 3px 3px 6px #C9C9C9;
+    
   }
   input[type=range]::-ms-fill-upper {
     background: #CCCCCC;
-    border: 0px solid #010101;
+    border: var(--sliderborder);
     border-radius: 100px;
-    box-shadow: 3px 3px 6px #C9C9C9;
+    
   }
   input[type=range]::-ms-thumb {
     margin-top: 1px;
-    box-shadow: 1px 1px 3px #808080;
-    border: 0px solid #00001E;
+    
+    border: var(--thumbborder);
     height: 30px;
     width: 30px;
     border-radius: 50px;
-    background: #000000;
+    background: var(--thumbcol);
     cursor: pointer;
   }
   input[type=range]:focus::-ms-fill-lower {
-    background: #CCCCCC;
+    background: #020202;
   }
   input[type=range]:focus::-ms-fill-upper {
     background: #CCCCCC;
