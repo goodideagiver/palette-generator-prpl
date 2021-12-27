@@ -73,7 +73,7 @@ function monoRange() {
     }
     monowrapper.innerHTML = innerMono;
     generateMonoSquares();
-    copySquareColor();
+    copySquareColor('#mono .pal-it');
     }, ((mono.length/10))*500);
 }
 
@@ -120,7 +120,7 @@ function colorRange() {
     }
     colorsqwrapper.innerHTML = innercolorsq;
     generateColorSquares();
-    copySquareColor();
+    copySquareColor('#color .pal-it');
     }, ((colorsq.length/10))*500);
 }
 
@@ -149,8 +149,8 @@ function copyColor() {
     copyColors(Colors);
 }
 
-function copySquareColor() {
-    let allSquares = document.querySelectorAll('.pal-it');
+function copySquareColor(select) {
+    let allSquares = document.querySelectorAll(select);
     allSquares.forEach(Square => {
         Square.addEventListener('click',() => copyColors(Square.innerText))
     });
