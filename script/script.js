@@ -73,6 +73,7 @@ function monoRange() {
     }
     monowrapper.innerHTML = innerMono;
     generateMonoSquares();
+    copySquareColor();
     }, ((mono.length/10))*500);
 }
 
@@ -119,22 +120,24 @@ function colorRange() {
     }
     colorsqwrapper.innerHTML = innercolorsq;
     generateColorSquares();
+    copySquareColor();
     }, ((colorsq.length/10))*500);
 }
 
 colorRange();
 
 
-document.getElementById('monosum').addEventListener('click',copyMono);
+
 
 function copyColors(text) {
     navigator.clipboard.writeText(text).then(function() {
-        alert('Skopiowano');
+        alert('Skopiowano ' + text);
       }, function(err) {
         alert('Nie skopiowano');
       });
 }
 
+document.getElementById('monosum').addEventListener('click',copyMono);
 function copyMono() {
     Colors = document.getElementById('monosum').innerText;
     copyColors(Colors);
@@ -144,4 +147,11 @@ document.getElementById('colorsum').addEventListener('click',copyColor);
 function copyColor() {
     Colors = document.getElementById('colorsum').innerText;
     copyColors(Colors);
+}
+
+function copySquareColor() {
+    let allSquares = document.querySelectorAll('.pal-it');
+    allSquares.forEach(Square => {
+        Square.addEventListener('click',() => copyColors(Square.innerText))
+    });
 }
