@@ -291,3 +291,38 @@ input[type=range]:focus::-ms-fill-upper {
           transform: scale(0.95);
   background-color: white;
 }
+
+a.colsum {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+  margin: 0;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+footer {
+  margin-top: 10vh;
+}
+
+footer h2 {
+  color: gray;
+  font-family: 'Staatliches', cursive;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+footer > div {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
