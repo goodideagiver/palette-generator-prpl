@@ -277,7 +277,6 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
   background-color: white;
   padding: 20px 30px;
-  margin: 0 20px;
   margin-top: 10px;
   text-align: center;
   width: fit-content;
@@ -285,6 +284,7 @@ footer {
   background-color: #484848;
   background: linear-gradient(to right,rgb(170, 66, 66),rgb(63, 63, 155));
   transition: .2s;
+  max-width: 90vw;
 }
 
 .disabled {
