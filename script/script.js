@@ -131,10 +131,19 @@ colorRange();
 
 function copyColors(text) {
     navigator.clipboard.writeText(text).then(function() {
-        alert('Skopiowano ' + text);
+        showMessage('Skopiowano ' + text + '! 😄');
       }, function(err) {
-        alert('Nie skopiowano');
+        showMessage('Nie można było skopiować 😢');
       });
+}
+
+const notification = document.getElementById('notification');0
+function showMessage(message) {
+    notification.innerText = message;
+    notification.classList.remove('disabled');
+    setTimeout(() => {
+        notification.classList.add('disabled');
+    }, 2000);
 }
 
 document.getElementById('monosum').addEventListener('click',copyMono);
