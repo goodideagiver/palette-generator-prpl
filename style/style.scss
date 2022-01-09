@@ -285,6 +285,8 @@ footer {
   background: linear-gradient(to right,rgb(170, 66, 66),rgb(63, 63, 155));
   transition: .2s;
   max-width: 90vw;
+  //background-size: 150% 100%;
+  //animation: BG-slide 2s infinite;
 }
 
 .disabled {
@@ -299,6 +301,19 @@ footer {
  top: 0;
  left: 0;
  width: 100%;
+}
+
+@keyframes BG-slide {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+  
 }
 
 @keyframes pulseDown {
