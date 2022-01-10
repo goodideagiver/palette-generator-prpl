@@ -154,3 +154,13 @@ function copySquareColor(select) {
         Square.addEventListener('click',() => copyColors(Square.innerText))
     });
 }
+
+
+const lastUpdate = document.getElementById('lastUpdate');
+fetch('https://api.github.com/repos/goodideagiver/palette-generator-prpl')
+.then(response => response.json())
+.then(data => {
+  let updateDate = new Date(data.updated_at);
+  lastUpdate.innerText = 'Last updated: ' + updateDate.toLocaleDateString();
+})
+.catch(error => lastUpdate.innerText = '');
