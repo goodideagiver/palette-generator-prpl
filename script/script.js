@@ -161,6 +161,6 @@ fetch('https://api.github.com/repos/goodideagiver/palette-generator-prpl')
 .then(response => response.json())
 .then(data => {
   let updateDate = new Date(data.updated_at);
-  lastUpdate.innerText = 'Last updated: ' + updateDate.toLocaleDateString();
+  lastUpdate.innerText = 'Last updated: ' + updateDate.toLocaleDateString() + ' ' + updateDate.toLocaleTimeString();
 })
 .catch(error => lastUpdate.innerText = '');
