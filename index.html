@@ -47,37 +47,50 @@
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="theme-color" content="#ffffff" />
         <script defer src="script/script.js"></script>
+		<script defer src="script/switcher.js"></script>
 	</head>
 	<body>
 		<div class="succes alert">Copied to clipboard</div>
 		<div class="fail alert">Copy to clipboard failed</div>
 		<h1>Color palette generator</h1>
-		<div id="mono" class="pal-wrapp">
-			<div class="pal-it"></div>
-		</div>
-		<div class="colsum" id="monosum"></div>
-		<button id="monobtn" class="col-bt">Generate mono</button>
-		<input
-			id="monorange"
-			type="range"
-			min="3"
-			max="10"
-			class="rangestyle"
-			value="6"
-		/>
-		<div id="color" class="pal-wrapp">
-			<div class="pal-it"></div>
-		</div>
-		<div class="colsum" id="colorsum"></div>
-		<button id="colorbtn" class="col-bt">Generate color</button>
-		<input
-			id="colorrange"
-			type="range"
-			min="3"
-			max="10"
-			class="rangestyle"
-			value="6"
-		/>
+		<nav class="color-switcher">
+			<h2>Color</h2>
+			<label class="switch">
+				<input id="colorSwitcher" type="checkbox">
+				<span class="slider round"></span>
+			  </label>
+			  <h2>Mono</h2>
+		</nav>
+		<section id="monoSection">
+			<div id="mono" class="pal-wrapp">
+				<div class="pal-it"></div>
+			</div>
+			<div class="colsum" id="monosum"></div>
+			<button id="monobtn" class="col-bt">Generate mono</button>
+			<input
+				id="monorange"
+				type="range"
+				min="3"
+				max="10"
+				class="rangestyle"
+				value="6"
+			/>
+		</section>
+		<section id="colorSection">
+			<div id="color" class="pal-wrapp">
+				<div class="pal-it"></div>
+			</div>
+			<div class="colsum" id="colorsum"></div>
+			<button id="colorbtn" class="col-bt">Generate color</button>
+			<input
+				id="colorrange"
+				type="range"
+				min="3"
+				max="10"
+				class="rangestyle"
+				value="6"
+			/>
+		</section>
 		<footer>
 			<h2>PURPLE BLACK</h2>
 			<div>
