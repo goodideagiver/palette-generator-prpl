@@ -30,9 +30,6 @@ function componentToHex(c) {
   function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   }
-  
-
-
 
 const monobtn = document.getElementById('monobtn');
 monobtn.addEventListener('click',generateMonoSquares)
@@ -56,8 +53,6 @@ function generateMonoSquares() {
     document.getElementById('monosum').innerHTML = clrstring;
 }
 
-
-
 const monowrapper = document.getElementById('mono');
 const monorange1 = document.getElementById('monorange');
 monorange1.addEventListener("change",monoRange)
@@ -78,7 +73,6 @@ function monoRange() {
 }
 
 monoRange();
-
 
 const colorbtn = document.getElementById('colorbtn');
 colorbtn.addEventListener('click',generateColorSquares)
@@ -104,7 +98,6 @@ function generateColorSquares() {
     document.getElementById('colorsum').innerHTML = clrstring;
 }
 
-
 const colorsqwrapper = document.getElementById('color');
 const colorsqrange1 = document.getElementById('colorrange');
 colorsqrange1.addEventListener("change",colorRange)
@@ -125,9 +118,6 @@ function colorRange() {
 }
 
 colorRange();
-
-
-
 
 function copyColors(text) {
     navigator.clipboard.writeText(text).then(function() {
