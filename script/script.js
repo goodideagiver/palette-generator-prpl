@@ -121,9 +121,9 @@ colorRange();
 
 function copyColors(text) {
     navigator.clipboard.writeText(text).then(function() {
-        showMessage('Skopiowano ' + text + '! 😄');
+        showMessage('Copied ' + text + '! 😄');
       }, function(err) {
-        showMessage('Nie można było skopiować 😢');
+        showMessage('Could not copy to clipboard 😢');
       });
 }
 
