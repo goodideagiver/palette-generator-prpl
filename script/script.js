@@ -127,13 +127,22 @@ function copyColors(text) {
       });
 }
 
-const notification = document.getElementById('notification');0
+const notification = document.getElementById('notification');
+const notifWrapper = document.querySelector('.notif-wrapper');
 function showMessage(message) {
+    const notification = document.createElement('div');
+    notification.classList.add('disabled','notification');
     notification.innerText = message;
-    notification.classList.remove('disabled');
+    notifWrapper.appendChild(notification);
     setTimeout(() => {
-        notification.classList.add('disabled');
-    }, 2000);
+        notification.classList.remove('disabled');
+        setTimeout(() => {
+            notification.classList.add('disabled');
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        }, 2000);
+    }, 20);
 }
 
 document.getElementById('monosum').addEventListener('click',copyMono);
